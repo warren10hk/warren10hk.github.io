@@ -23,7 +23,7 @@ $(document).ready(function() {
     "花蓮縣": 71.96,
     "臺東縣": 63.75
   };
-  d3.json("hongkong.json", function(topodata) {
+  d3.json("county.json", function(topodata) {
     var features = topojson.feature(topodata, topodata.objects.county).features;
     var color = d3.scale.linear().domain([0,10000]).range(["#090","#f00"]);
     var fisheye = d3.fisheye.circular().radius(100).distortion(2);
